@@ -1,0 +1,40 @@
+/* ==========================================================================
+   Home Page Template
+   ========================================================================== */
+
+.slider{
+  ul{
+    background: url("assets/images/slider-pattern.png") repeat top left;
+    margin: 0;
+    padding: 0;
+    li{
+      list-style: none;
+      img{
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .slider-caption{
+        @include outer-container();
+        padding: 40px 0;
+        color: $white;
+
+        h1{
+          margin: 0;
+        }
+
+        p{
+          margin: 0;
+          font-size: 18px;
+        }
+      }//caption-image
+    }
+  }
+
+}
+
+
+#main{
+  @include outer-container();
+
+}

@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+ .wrap {
+   width: 96%;
+   margin: 0 auto;
+ }
+ @media only screen and (min-width: 768px) {
+   .wrap {
+      @include outer-container;
+   }
+ }
+
+ .unstyled {
+   list-style: none;
+ }

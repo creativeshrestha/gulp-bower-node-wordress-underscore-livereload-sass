@@ -1,0 +1,149 @@
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.home .header {
+/*
+  left: 0;
+  position: absolute;
+  top: 0;
+*/
+  width: 100%;
+  z-index: 99;
+  #menu-main-navigation {
+    li {
+      a {
+        color: white;
+      }
+    }
+  }
+}
+
+.header {
+  position: relative;
+  top: 0;
+  background: $lightWhite;
+  @include clearfix();
+
+  @include bp-medium {
+    #inner-header {
+      display: block;
+      position: relative;
+      padding: 25px 0;
+      @include outer-container;
+    }
+    nav {
+      @include span-columns(10);
+      @include omega();
+    }
+    #logo {
+      img {max-width: 100px;}
+      @include span-columns(2);
+    }
+    #menu-main-navigation {
+      margin: 20px 0px;
+      line-height: 1em;
+      text-align: right;
+      li {
+        display: inline-block;
+        padding: 10px 12px;
+
+        &:first-child {
+          margin-left: 5px;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+        a {
+          color: $black;
+          font-size: 1em;
+          text-transform: uppercase;
+          font-weight: 600;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }// end bp-medium
+
+  .header-top{
+    background: url("assets/images/header-pattern.png") repeat top left;
+    color: $secondaryColor;
+    @include clearfix();
+
+    .header-top-container{
+      @include outer-container;
+      .contact-head{
+        color: $secondaryColor;
+        @include span-columns(6);
+        ul
+        { margin: 0; padding: 0;
+          li
+          {
+            list-style: none;
+            display: inline-block;
+            padding: 14px 0;
+            a{
+              color: $secondaryColor;
+            }
+          }
+        }
+
+      }//end contact-head
+
+      .login-language{
+        @include span-columns(6);
+        @include omega();
+        ul{
+          margin: 0;
+          padding: 0;
+          text-align: right;
+          li{
+            list-style: none;
+            @include inline-block;
+            padding: 14px 8px;
+            a{
+              color: $secondaryColor;
+            }
+          }
+        }
+      }//end login-language
+    }// end header-top-container
+
+  }//header-top
+
+  .header-main{
+    @include outer-container();
+
+    .site-branding{
+      @include span-columns(4);
+      h1{
+        font-size: 24px;
+        color: $white;
+      }
+      .logo{
+        padding: 15px 0;
+      }
+    }//end site-branding
+
+    .main-nav{
+      @include span-columns(8);
+      @include omega();
+      ul{
+        text-align: right;
+        margin-top: 46px;
+        li{
+          @include inline-block;
+          a{
+            padding: 50px 8px;
+            &:hover{
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+  }// end header-main
+
+}//end header
+
