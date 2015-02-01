@@ -5,7 +5,7 @@ var project     = 'voidance'
   , src         = './src/'
   , build       = './build/'
   , dist        = './dist/'+project+'/'
-  , bower       = './bower_components/'
+  , bower       = './assets/'
 ;
 
 // Project settings
